@@ -1,0 +1,20 @@
+<h3>Create Machine</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name of Manufacturer</label>
+      <input type="text" class="form-control" id="manufacturer" required [(ngModel)]="machine.manufacturer" name="manufacturer">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Machine Details</label>
+      <input type="text" class="form-control" id="details" required [(ngModel)]="machine.details" name="details">
+    </div>
+
+    <button type="submit" class="btn btn-success">Add</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>New machine has been added!</h4>
+</div>

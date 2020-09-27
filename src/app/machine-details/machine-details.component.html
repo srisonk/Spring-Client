@@ -1,0 +1,15 @@
+<h2>Machine Details</h2> 
+
+<hr/>
+<div *ngIf="machine">
+  <div>
+    <label><b>Manufacturer: </b></label> {{machine.manufacturer}}
+  </div>
+  <div>
+    <label><b>Details: </b></label> {{machine.details}}
+  </div> 
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Machine List</button><br>
